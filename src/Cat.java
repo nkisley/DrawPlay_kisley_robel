@@ -19,6 +19,12 @@ public class Cat {
 	// mouth starts about 40% from left edge of head
 	private static final int MOUTH_X = HEAD_DIMENSION/5 * 2;
 	private static final int MOUTH_Y = HEAD_DIMENSION/5 * 3;
+	// left ear pos
+	private static final int L_EAR_Y = 0;
+	private static final int L_EAR_X = HEAD_DIMENSION/15;
+	// left ear size
+	private static final int L_EAR_HEIGHT = 40;
+	private static final int L_EAR_WIDTH = 20;
 	
 	// draw will render the Cat on the Graphics object
 	public void draw(Graphics g, int catX, int catY)
@@ -49,5 +55,10 @@ public class Cat {
 		// so it doesn't overlap the drawing
 		g2.drawString("Meow", catX, catY+HEAD_DIMENSION+10);	
 		g2.drawString("I come from underworld", catX, catY+HEAD_DIMENSION+40);
+		// Draw left ear
+		x = catX + L_EAR_X;
+		y = catY + L_EAR_Y;
+		g2.fillOval(x, y, L_EAR_WIDTH, L_EAR_HEIGHT);
+		g2.setColor(Color.gray);
 	}
 }
