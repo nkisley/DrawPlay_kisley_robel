@@ -59,6 +59,8 @@ public class Cat {
 		x = catX + L_EAR_X;
 		y = catY + L_EAR_Y;
 		g2.fillOval(x, y, L_EAR_WIDTH, L_EAR_HEIGHT);
+		x += HEAD_DIMENSION - 30;
+		g2.fillOval(x, y, L_EAR_WIDTH, L_EAR_HEIGHT);
 		g2.setColor(Color.gray);
 	}
 }
